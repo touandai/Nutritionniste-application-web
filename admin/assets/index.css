@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+body a {
+  text-decoration: none;
+}
+/*pages connexion*/
+#connexion {
+   display: flex;
+   justify-content: center;
+   
+
+}
+/*header*/
+header {
+  background:#0b2020;
+  margin-bottom: 30px;
+}
+/*deconnexion*/
+.btn-deconnexion {
+  display: inline;
+  vertical-align: middle;
+  margin-left: 20px;
+}
+/*entête*/
+
+.logo {
+  float: left;
+  padding: 20px;
+}
+.information-user {
+  float: right;
+  padding: 20px;
+  margin-top:50px;
+  color:white;
+}
+.btn-deconnexion {
+  display: inline;
+  vertical-align: middle;
+  margin-left: 20px;
+}
+.clear {
+  clear: both;
+}
+/*menu*/
+.menu
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.menu a {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  text-transform: uppercase;
+  background: #0b2020;
+  color: #ffffff;
+  font-size: 12px;
+
+  border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+/*footer*/
+.footer{
+  margin-top:10px;
+  text-align: center;
+  border: 2px solid black;
+}
+.text-center
+{
+  text-align: center;
+  margin-bottom: 20px;
+}
+p
+{
+  font-weight: bold;
+  font-size: larger;
+}
+/*page ajout patients*/
+
+.ajout-patient
+{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.form
+{
+
+ margin:10px;
+ padding:10px;
+}
+legend
+{
+  color:#0b2020;
+  font-weight: bolder;
+}
+/*pages gestion recettes*/
+.gestion-recette
+{
+  display: flex;
+  justify-content:space-evenly;
+
+}
+.recette
+{
+  display: flex;
+  justify-content:space-around;
+  padding: 10px;
+}
+.content 
+{
+  border: 2px solid black;
+  
+}
+.gestion-recette
+{
+  border: 2px solid black;
+}
+/*pages recette patients*/
+#recettes
+{
+  display: flex;
+  justify-content:space-between;
+  margin-top: 10px;
+  padding: 20px;
+}
+img{
+  max-width: 100%;
+  height: auto;  
+}
+/*avis*/
+.avis
+{
+  margin-top: 5px;
+  border:2px solid;
+  border-radius: 5px;
+  text-align: center;
+  font-weight:bolder;
+}
+.ajout-sup
+{
+  display: flex;
+  
+}
+strong
+{
+  color:red;
+}
+p
+{
+  color :blue;
+}

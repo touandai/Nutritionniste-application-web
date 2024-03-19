@@ -1,0 +1,14 @@
+Pour ajouter un patient :
+
+1. On enregistre les informations du patient dans la table PATIENTS sans son/ses types de régime.
+2. On récupère l'ID du patient ajouté, et on ajoute dans la table LIEN_TYPE_REGIME_PATIENT, les infos du patient et son/ses types de régime.
+
+
+select 
+pat.* 
+, tr.libelle as type_regime
+from cabinet_diet.patients pat
+inner join cabinet_diet.lien_type_regime_patient ltrp 
+on ltrp.id_patient = pat.id
+left join cabinet_diet.type_regime tr 
+ON tr.id = ltrp.id_type_regime

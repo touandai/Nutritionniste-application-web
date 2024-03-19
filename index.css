@@ -1,0 +1,189 @@
+@charset "UTF-8";
+body {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+header img {
+  max-width: 100%;
+  height: auto;
+}
+
+#menu {
+  justify-content: center;
+}
+
+.menu:hover {
+  background-color: RGBa(189, 183, 107, 74);
+}
+
+nav ul li {
+  display: inline;
+  font-size: larger;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 2px;
+  padding: 10px;
+}
+
+li a {
+  text-decoration: none;
+}
+
+/*bandeau*/
+#nav2 {
+  display: flex;
+  justify-content: center;
+  letter-spacing: 2px;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: #FF6347;
+  color: #FFFFFF;
+}
+
+/*main menu principal*/
+#accueil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/*section */
+#section1, #section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*aside footer*/
+#aside {
+  display: flex;
+  justify-content: center;
+  font-size: larger;
+  letter-spacing: 3px;
+  margin-top: 10px;
+}
+
+#aside > ul > li {
+  display: inline;
+  font-size: medium;
+  font-family: fantasy;
+  letter-spacing: 2px;
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  font-size: large;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #0064cb;
+}
+
+/*page consultation*/
+.rubrique {
+  font-size: larger;
+  text-align: center;
+  padding: 10px;
+  width: 280px;
+  background-color: #BDB76B;
+  border: 2px solid;
+  border-radius: 20px;
+}
+
+main #consultations {
+  display: flex;
+}
+main #consultations section, main #consultations #tarifsconsultation, main #consultations #ateliers {
+  display: block;
+}
+main #consultations section section, main #consultations section #explication, main #consultations #tarifsconsultation section, main #consultations #tarifsconsultation #explication, main #consultations #ateliers section, main #consultations #ateliers #explication {
+  font-size: medium;
+  padding: 10px;
+  width: 300px;
+}
+
+/* Recettes de bases*/
+em {
+  color: #0064cb;
+  font-size: larger;
+}
+
+main, #main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+section, #t-recette {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+section, .recettes {
+  display: block;
+}
+
+aside, #lien {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  color: #FF6347;
+}
+
+#recettes {
+  display: flex;
+}
+
+/*Page confidentialité */
+#confidentialite {
+  flex-direction: column;
+}
+
+/*Formulaires*/
+#espaceclient, #inscriptions, #contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  padding: 30px;
+}
+
+.login, .inscription, .contact {
+  margin:10px;
+  padding: 20px;
+  border: 15px solid #FF6347;
+  border-radius: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  
+}
+
+#validation{
+	color:#2C5E2E;
+	padding:5px;
+	
+}
+
+strong{
+  color:red;
+}
+@media screen and (max-width: 500px) {
+  main, #consultations {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,160 @@
+body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0px;
+    padding:0px;
+}
+header{
+    display: flex;
+    justify-content: center;
+    padding:10px;
+}
+img{
+    max-width: 100%;
+    height: auto;  
+}
+#menu{
+    justify-content: center;
+}
+.menu:hover{
+  background-color: RGBa(189, 183, 107, 74);
+}
+nav > ul > li  {
+    display: inline;
+    font-size: larger;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing:2px;
+    padding:10px;
+}
+li  a {
+    text-decoration: none;
+}
+/*bandeau*/
+#nav2{
+    display: flex;
+    justify-content: center;
+    letter-spacing: 2px;
+    border:1px solid;
+    border-radius: 10px;
+    background-color:#FF6347;
+    color:white;
+}
+/*main menu principal*/
+#accueil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:10px;
+}
+/*section */
+
+#section1, #section2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+/*aside footer*/
+
+#aside{
+    display:flex;
+    justify-content: center;
+    font-size:larger;
+    letter-spacing:3px;
+    margin-top:10px;
+}
+#aside > ul > li {
+    display: inline;
+    font-size:medium;
+    font-family:fantasy;
+    letter-spacing:2px;
+    padding:20px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    font-size:large;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing:1px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: blue;
+}
+/*page consultation*/
+.rubrique{
+    font-size: larger;
+    text-align: center;
+    padding: 10px;
+    width: 280px;
+    background-color: #BDB76B;
+    border: 2px solid;
+    border-radius: 20px;
+}
+main, #consultations {
+    display: flex;
+}
+section, #tarifsconsultation, #ateliers{
+    display: block;
+    
+}
+section, #explication{
+    font-size: medium;
+    padding: 10px;
+    width: 300px;
+     
+}
+/* Recettes de bases*/
+em{
+    color:blue;
+    font-size: larger;
+  }
+  main, #main{
+    display: flex;
+    justify-content:space-evenly; 
+  }
+  
+  section, #t-recette{
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+  }
+  section, .recettes{
+      display: block;
+  }
+  aside, #lien{
+      display: flex;
+      justify-content: center;
+      margin-top: 5px;
+      color:#FF6347;
+  }
+  #recettes{
+    display: flex; 
+  }
+
+/*Formulaires*/
+#espaceclient, #inscriptions, #contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:5px;
+    padding:30px;
+}
+.login, .inscription, .contact {
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color:white; 
+    letter-spacing: 1px;
+}
+
+/*Page confidentialité */
+#confidentialite{
+    flex-direction: column;
+}
+
+@media screan and (max-width: 600px) {
+    main, #consultations {
+        flex-direction: flex;
+    }
+ }
+ 
