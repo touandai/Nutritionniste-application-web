@@ -1,6 +1,5 @@
 @charset "UTF-8";
 body {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   margin: 0px;
   padding: 0px;
 }
@@ -117,6 +116,28 @@ main #consultations section section, main #consultations section #explication, m
   width: 300px;
 }
 
+.text-center {
+  font-weight: bolder;
+  text-align: center;
+  color: green;
+}
+
+.text-centre {
+  font-weight: bolder;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+.validation {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
 /* Recettes de bases*/
 em {
   color: #0064cb;
@@ -126,6 +147,18 @@ em {
 main, #main {
   display: flex;
   justify-content: space-evenly;
+}
+
+strong {
+  color: red;
+}
+
+.black {
+  color: #000400;
+}
+
+.important {
+  color: #BDB76B;
 }
 
 section, #t-recette {
@@ -154,8 +187,15 @@ aside, #lien {
   flex-direction: column;
 }
 
+.recherche {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
 /*Formulaires*/
-#espaceclient, #inscriptions, #contact {
+.formulaire {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,27 +203,24 @@ aside, #lien {
   padding: 30px;
 }
 
-.login, .inscription, .contact {
-  margin:10px;
+.style-form {
   padding: 20px;
-  border: 15px solid #FF6347;
-  border-radius: 10px;
+  border: 5px solid #FF6347;
+  border-radius: 15px;
   font-weight: bold;
+  background-color: #FFFFFF;
   letter-spacing: 1px;
-  
 }
 
-#validation{
-	color:#2C5E2E;
-	padding:5px;
-	
-}
-
-strong{
-  color:red;
-}
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   main, #consultations {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  main, #recettesup {
     flex-direction: column;
   }
 }/*# sourceMappingURL=index.css.map */

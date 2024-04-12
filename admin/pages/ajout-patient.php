@@ -124,8 +124,7 @@ if(array_key_exists('ajout_patient', $_POST)) {
                     ?>
                 </div>
                 <div>
-                    <?php 
-                        
+                    <?php
                         $req = "SELECT * FROM  cabinet_diet.type_regime";
                         $tbr = $conn -> query($req);
                         $type_regime = $tbr ->fetchAll();
@@ -137,16 +136,14 @@ if(array_key_exists('ajout_patient', $_POST)) {
                         ?>
                         <option value="<?php echo $value['id']; ?>"><?php echo $value['libelle'];?></option>
                         <?php
-                            }
+                        }
                         ?>
-                    
                     </select>
                     <br>
                     <button class="btn btn-success" type="submit" name="ajout_patient"> Valider</button>
                 </div>
             </fieldset>
         </form>
-
         <section>
         <table class="table table-striped table-bordered">
           <caption>Moderation des avis</caption>
@@ -162,8 +159,7 @@ if(array_key_exists('ajout_patient', $_POST)) {
                     </tr>
             </thead>
             <tbody>
-            <?php 
-
+            <?php
                 $req = "SELECT * FROM  cabinet_diet.patients  ORDER BY date_avis ASC ";
                 
                 $tdr = $conn -> query($req);
@@ -180,31 +176,24 @@ if(array_key_exists('ajout_patient', $_POST)) {
                     <td><?php echo $value['recette_id'];?></td>
                     <td>
                     <?php ?>
-
-                    <a href="?page=avis&action=ajouter&id=<?php echo $value['id']; ?>"><button class="btn btn-success" type="submit">Valider</button></a>    
-                     
+                    <a href="?page=avis&action=ajouter&id=<?php echo $value['id']; ?>"><button class="btn btn-success" type="submit">Valider</button></a>
                     <?php 
                     /*
                     $sup = "DELETE * FROM  cabinet_diet.avis where note=0; ORDER BY date_avis ASC ";
-
                     $tdr = $conn -> query($sup);
                        */                 
                     ?>
-                    
                     <a href="?page=avis&action=supprimer&id=<?php echo $value['id']; ?>"><button class="btn btn-danger"type="submit">Supprimer</button></a>
                     </td>
-                </tr>   
+                </tr>
             <?php
-                }
-
+            }
             ?>
             </tbody>
 
        </table>
         </section>
 </section>
-
-
 </main>
 <?php
 

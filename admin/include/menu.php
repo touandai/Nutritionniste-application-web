@@ -1,7 +1,7 @@
 <nav class="nav-bar menu">
-    <a href="?page=tableau-de-bord">Tableau de bord</a>
-    <a href="?page=patients">Gérer les patients</a>
-    <a href="?page=avis">Gérer les avis</a>
-    <a href="?page=gestion-recettes">Gérer les Recettes</a>
-    <a href="?page=ajout-modif-avis.php">ajout-modif-avis.php</a>
+    <a href="?pages=tableau-de-bord">Tableau de bord</a>
+    <a href="?pages=gestion-patients">Gérer les Patients</a>
+    <a href="?pages=gestion-recettes">Gérer les Recettes</a>
+    <a href="?pages=avis">Gerer les Avis.php</a>
+    <a href="?pages=recettes-sup">Recette Sup</a>
 </nav>

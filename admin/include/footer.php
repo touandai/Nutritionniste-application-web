@@ -1,5 +1,5 @@
 <div class="footer">
-    <p>Copyright</p>
+    <span class="text-blanc">Copyright</span>
 </div>
 
 </body>

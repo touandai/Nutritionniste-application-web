@@ -2,16 +2,12 @@
 $title = "Gestion Recettes";
 
 require 'include/header.php';
-require 'include/header-elements.php';
-
-require 'include/menu.php';
-
 
                        if(array_key_exists('valider',$_POST)){
                         //var_dump(date('Y-m-d h:m:s'));die;
                             $erreur = []; 
                             if(empty($_POST['nom'])){
-                              $erreur['champ_nom']="Votre nom est obligatoire!";
+                              $erreur['champ_nom']="Votre Pseudo est obligatoire!";
                             }
                             if(empty($_POST["note"])){
                               $erreur['champ_note']="Veuillez choisir une note!";
@@ -37,6 +33,7 @@ require 'include/menu.php';
                             ]);
                         }
                     
+                        
                     
 ?>
 
@@ -77,7 +74,6 @@ require 'include/menu.php';
             <p><?php $recettes['titre']; ?></p>
             <?php
         }
-        
     }else{
         ?>
         <p>aucune recette ne correspond à votre recherche</p>
@@ -87,15 +83,19 @@ require 'include/menu.php';
 
 </aside>
 
+
+
 <!--contenu principal-->
-<main id="recettes" class="container content">
+<main id="recettes" class="container">
+
+
     
         <section class="container recette-patient">
             <h2>Végétarien</h2>
             <br>
             <div>
                 <ul>
-                    <li>Titre: Salade</li>
+                    <li>Titre: <?php  ?></li>
                     <li>Description: Le Lorem Ipsum est...</li>
                     <li>Temps de préparation : 90, ..</li>
                     <li>Temps de repos: 30 miutes</li>
@@ -144,26 +144,23 @@ require 'include/menu.php';
             </div> 
             </div>  
             <br> 
+
             <div>
                 <img src="images/recette2.png" alt="recette2"/>
             </div>  
-            
+
         </section>         
 
-        <!--laisser un avis-->
+        // formulaire ajout avis //
 
         <section class="container">
-        
              <div class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        
-             
-                <form class="form" method="POST" action="">
-                                         
+                <form class="form" method="POST" action="">              
                     <fieldset>
                         <legend>Laissez-nous votre avis</legend>
                         <br>
                         <div>
-                            <label class="form-label">Nom :</label>
+                            <label class="form-label">Pseudo/Nom :</label>
                             <input class="form-control" type="text" name="nom"/>
                             <?php
                             if(isset($_SESSION['erreur']) && isset($_SESSION['erreur']['test_champ_nom']) ){
@@ -197,31 +194,11 @@ require 'include/menu.php';
                     </fieldset>
                 </form> 
              </div>   
-             
-             <!--affichers les avis clients-->
-             <div class="avis btn-secondary"> Avis clients</div>  
-             <?php 
-                $req = "SELECT * FROM cabinet_diet.avis ORDER BY date_avis ASC LIMIT 2";
-                $tdr = $conn -> query($req);
-
-               $resultat = $tdr -> fetchAll();
-               foreach($resultat as $key => $value) {
-             ?>
-
-             <div class="avis-patients">
-                
-             <p class="post">Commentaire posté par : <?php  echo $value['auteur']; ?> <em class="post">Note : <?php echo $value['note'];  ?> </em><br> <span class="post">Message : <?php echo $value['commentaire']; ?></span>
-            </div>
-             <?php
-             }
-            ?>
         </section>  
     </main>
 
 
 <?php
-include 'include/footer.php';
+require 'include/footer.php';
 
 ?>
-    
-    
