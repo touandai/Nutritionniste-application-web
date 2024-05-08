@@ -46,7 +46,7 @@ require 'connexion.php';
            $result =  $pdoStatement -> execute ();
            
            if($result == "true"){
-           header("location:?existe=1");
+           header("location:?existe=1");die;
            }
 			
 		

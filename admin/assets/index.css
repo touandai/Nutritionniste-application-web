@@ -17,15 +17,14 @@ body a {
 }
 /*pages connexion*/
 #connexion {
-   display: flex;
-   justify-content: center;
-   padding: 10px;  
-   margin-top: 100px;
-
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 100px;
 }
 /*header*/
 header {
-  background:#0b2020;
+  background: #0b2020;
   margin-bottom: 30px;
 }
 /*deconnexion*/
@@ -43,8 +42,8 @@ header {
 .information-user {
   float: right;
   padding: 20px;
-  margin-top:30px;
-  color:white;
+  margin-top: 30px;
+  color: white;
 }
 .btn-deconnexion {
   display: inline;
@@ -55,8 +54,7 @@ header {
   clear: both;
 }
 /*menu*/
-.menu
-{
+.menu {
   display: flex;
   justify-content: center;
   margin-top: 10px;
@@ -76,53 +74,47 @@ header {
   -webkit-border-radius: 5px;
 }
 /*footer*/
-.footer{
-  margin-top:120px;
+.footer {
+  margin-top: 120px;
   text-align: center;
-  background-color:  #0b2020;
+  background-color: #0b2020;
   padding: 30px;
 }
-.text-center
-{
+.text-center {
   text-align: center;
   margin-bottom: 20px;
 }
-p{
+p {
   font-weight: bold;
   font-size: larger;
-  color :blue;
+  color: blue;
 }
-.succes{
+.succes {
   color: green;
 }
 /*page ajout patients*/
 
-.ajout-patient
-{
+.ajout-patient {
   display: flex;
   justify-content: center;
   padding: 10px;
 }
-.form
-{
-
- margin:10px;
- padding:10px;
+.form {
+  margin: 10px;
+  padding: 10px;
 }
-legend
-{
-  color:#0b2020;
+legend {
+  color: #0b2020;
   font-weight: bolder;
 }
 /*pages gestion recettes*/
-.gestion-recette{
+.gestion-recette {
   display: flex;
   flex-direction: column;
 }
-.recette
-{
+.recette {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   padding: 10px;
 }
 .content {
@@ -130,39 +122,41 @@ legend
   flex-direction: column;
 }
 /*pages recette patients*/
-#recettes{
+#recettes {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   margin-top: 10px;
   padding: 20px;
 }
-img{
+img {
   max-width: 100%;
-  height: auto;  
+  height: auto;
 }
 /*avis*/
-.avis
-{
+.avis {
   margin-top: 5px;
-  border:2px solid;
+  border: 2px solid;
   border-radius: 5px;
   text-align: center;
-  font-weight:bolder;
+  font-weight: bolder;
 }
 .ajout-sup {
   display: flex;
 }
-strong{
-  color:red;
+strong {
+  color: red;
 }
-.text-blanc{
+.text-blanc {
   color: white;
   font-weight: bolder;
   font-size: larger;
 }
-h1{
+h1 {
   margin-top: 40px;
 }
-.text-centre{
+.text-centre {
   text-align: center;
+}
+em {
+  color: green;
 }

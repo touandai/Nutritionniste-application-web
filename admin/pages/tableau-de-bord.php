@@ -12,7 +12,7 @@ require 'include/menu.php';
 <h1 class="text-center">Tableau de bord</h1>
 
 <section class="container">
-<em class="text-center">Inscrire un nouveau membre Admin ? <a href="pages/inscription.php">Inscription</a></em>
+<em class="text-center">Inscrire un nouveau membre Admin ? <a href="?pages=inscription">Inscription</a></em>
 </section>
 
 <?php

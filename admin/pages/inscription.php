@@ -1,24 +1,25 @@
 <?php
-session_start();
-$title = 'Inscription';
 
+$title = 'Inscription';
 require 'include/header.php';
 require 'include/header-elements.php';
+require 'include/menu.php';
+
 
     if(array_key_exists('envoyer',$_POST)){
         
             if(isset($_POST['nom']) && empty($_POST['nom'])){
-            header("location:?nom=1");
+            header("location:?pages=inscription&nom=1");
             exit();
             }
 
            if(isset($_POST['email']) && empty($_POST['email'])){
-           header("location:?email=1");
+           header("location:?pages=inscription&email=1");
            exit();
            }
 
            if(isset($_POST['password']) && empty($_POST['password'])){
-           header("location:?password=1");
+           header("location:?pages=inscription&password=1");
            exit();
            }
 		   
@@ -38,16 +39,15 @@ require 'include/header-elements.php';
 
            //verification email //
 
-           $verifEmail = 'SELECT * FROM cabinet_diet.patient WHERE email = :email';
+           $verifEmail = 'SELECT * FROM cabinet_diet.administrateur WHERE email = :email';
            $pdoStatement = $conn -> prepare($verifEmail);
            $pdoStatement -> bindValue(':email', $email);
-           $result =  $pdoStatement -> execute ();
+           $response =  $pdoStatement -> execute ();
            
-           if($result == "true"){
-           header("location:?existe=1");
+           if($response == "true"){
+           header("location:?pages=inscription&mail=1");die;
            }
-			
-		
+		           
             $reqInsert ='INSERT INTO cabinet_diet.administrateur(nom, email, mot_de_pass, date_creation)
             values (:nom, :email, :password, :date)';
             
@@ -60,7 +60,7 @@ require 'include/header-elements.php';
             ":date" => date('Y-m-d h:m:s'),
 
             ]);
-			header("location:?pages=inscription&valider=1");
+			header("location:?pages=inscription&valider=1");die;
     }
     
 ?>
@@ -70,6 +70,12 @@ require 'include/header-elements.php';
     <main class="container formulaire">
         <div class="style-form">
             <form id="inscription" action="" method="POST">
+            <?php if(isset($_GET['valider']) && ($_GET['valider'] ==1)) {
+            ?>
+        <div style="padding: 20px;color: #ffffff;background: green;text-align:center;"><b>Ajouter avec succès!</b></div>
+            <?php
+             }
+            ?>
                 <fieldset>
                        <legend>Inscrire un Membre</legend>
                              <div class="mb-3">
@@ -93,8 +99,8 @@ require 'include/header-elements.php';
                                 }
                                 ?>
                                 <?php
-                                if(isset($_GET['existe']) && $_GET['existe']==1){
-                                echo '<strong> Ce email existe déjà ! </strong>';
+                                if(isset($_GET['mail']) && $_GET['mail']==1){
+                                echo '<strong> Cet email existe déjà ! </strong>';
                                 }
                                 ?>
                              </div>
@@ -117,6 +123,3 @@ require 'include/header-elements.php';
     </main>
 
      <!--footer-->
-<?php
-   require 'include/footer.php';
-?>

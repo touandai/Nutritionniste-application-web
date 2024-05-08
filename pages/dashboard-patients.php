@@ -1,5 +1,5 @@
 <?php
-$title = 'Recherche';
+$title = 'Tableau de bord Patient';
 session_start();
 
 if(!isset($_SESSION['info_patients'])) {
@@ -61,15 +61,15 @@ require 'connexion.php';
     <div class="row">
             <h2 class="text-centre"><em><?php echo $recette['titre']; ?></em></h2>
             <br>
-            <div class="col text-centre">
+            <div class="col">
                 <ul>
-                    <li>Titre:<?php  echo $recette['titre']; ?></li>
-                    <li>Description: <?php  echo $recette['description']; ?></li>
-                    <li>Temps de préparation : <?php  echo $recette['temps_preparation']; ?></li>
-                    <li>Temps de repos: <?php  echo $recette['temps_repos']; ?></li>
-                    <li>Ingrédients: <?php  echo $recette['ingredients']; ?></li>
-                    <li>Etapes: <?php  echo $recette['etapes']; ?></li>
-                    <li>Allergènes: <?php  echo $recette['allergene']; ?></li>
+                    <li>Titre: <em><?php  echo $recette['titre']; ?></em></li>
+                    <li>Description: <strong><?php  echo $recette['description']; ?></strong></li>
+                    <li>Temps de préparation : <strong class="vert"><?php  echo $recette['temps_preparation']; ?></strong></li>
+                    <li>Temps de repos: <strong class="vert"><?php  echo $recette['temps_repos']; ?></strong></li>
+                    <li>Ingrédients: <strong class="vert"><?php  echo $recette['ingredients']; ?></strong></li>
+                    <li>Etapes: <strong class="vert"><?php  echo $recette['etapes']; ?></strong></li>
+                    <li>Allergènes: <strong class="vert"> <?php  echo $recette['allergene']; ?></strong></li>
                 </ul>
             </div>
             <br>
@@ -78,8 +78,8 @@ require 'connexion.php';
                 <img class="rounded" src="../images/dietetic.png" alt="recette2"/>
             </div>
 
-            <div class="col=2 text-center"><a href="ajoutavis.php?id_recette=<?php echo $recette['id']; ?>">Laisser un avis</a>
-            
+            <div class="col=2 text-center"><a class="ancre" href="ajoutavis.php?id_recette=<?php echo $recette['id']; ?>">Laisser un avis</a>
+           
                 <?php
                     $req = "SELECT * FROM cabinet_diet.avis WHERE recette_id = :recette_id ORDER BY date_avis ASC";
                         $tdr = $conn -> prepare($req);

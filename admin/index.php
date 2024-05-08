@@ -2,7 +2,6 @@
 //session_start();//
 /* On démarre la session */
 
-
 require 'pages/connexion.php';
 
 
@@ -40,10 +39,6 @@ switch($pages) {
     case 'gestion-patients':
       require 'pages/gestion-patients.php';
        break;
-         /* ajout patients*/
-    case 'ajout-patient':
-      require 'pages/ajout-patient.php';
-       break;
   /* Gestion recettes supplementaires*/
   case 'gestion-recettes':
     require 'pages/gestion-recettes.php';
@@ -52,9 +47,6 @@ switch($pages) {
   case 'avis':
     require 'pages/avis.php';
     break;
-     case 'recettes-sup':
-      require 'pages/recettes-sup.php';
-       break;
 }
 
 

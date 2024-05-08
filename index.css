@@ -41,8 +41,8 @@ li a {
   letter-spacing: 2px;
   border: 1px solid;
   border-radius: 10px;
-  background-color: #FF6347;
-  color: #FFFFFF;
+  background-color: #ff6347;
+  color: #ffffff;
 }
 
 /*main menu principal*/
@@ -54,7 +54,8 @@ li a {
 }
 
 /*section */
-#section1, #section2 {
+#section1,
+#section2 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,7 +100,7 @@ footer {
   text-align: center;
   padding: 10px;
   width: 280px;
-  background-color: #BDB76B;
+  background-color: #bdb76b;
   border: 2px solid;
   border-radius: 20px;
 }
@@ -107,10 +108,17 @@ footer {
 main #consultations {
   display: flex;
 }
-main #consultations section, main #consultations #tarifsconsultation, main #consultations #ateliers {
+main #consultations section,
+main #consultations #tarifsconsultation,
+main #consultations #ateliers {
   display: block;
 }
-main #consultations section section, main #consultations section #explication, main #consultations #tarifsconsultation section, main #consultations #tarifsconsultation #explication, main #consultations #ateliers section, main #consultations #ateliers #explication {
+main #consultations section section,
+main #consultations section #explication,
+main #consultations #tarifsconsultation section,
+main #consultations #tarifsconsultation #explication,
+main #consultations #ateliers section,
+main #consultations #ateliers #explication {
   font-size: medium;
   padding: 10px;
   width: 300px;
@@ -144,7 +152,8 @@ em {
   font-size: larger;
 }
 
-main, #main {
+main,
+#main {
   display: flex;
   justify-content: space-evenly;
 }
@@ -153,29 +162,36 @@ strong {
   color: red;
 }
 
+.vert {
+  color: green;
+}
+
 .black {
   color: #000400;
 }
 
 .important {
-  color: #BDB76B;
+  color: #bdb76b;
 }
 
-section, #t-recette {
+section,
+#t-recette {
   display: block;
   text-align: center;
   margin-top: 10px;
 }
 
-section, .recettes {
+section,
+.recettes {
   display: block;
 }
 
-aside, #lien {
+aside,
+#lien {
   display: flex;
   justify-content: center;
   margin-top: 5px;
-  color: #FF6347;
+  color: #ff6347;
 }
 
 #recettes {
@@ -194,6 +210,15 @@ aside, #lien {
   margin-bottom: 20px;
 }
 
+.ancre {
+  text-decoration: none;
+  padding: 2px;
+  border: 3px solid;
+  border-radius: 10px;
+  background-color: #ff6347;
+  color: white;
+}
+
 /*Formulaires*/
 .formulaire {
   display: flex;
@@ -205,22 +230,24 @@ aside, #lien {
 
 .style-form {
   padding: 20px;
-  border: 5px solid #FF6347;
+  border: 5px solid #ff6347;
   border-radius: 15px;
   font-weight: bold;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   letter-spacing: 1px;
 }
 
 @media screen and (max-width: 600px) {
-  main, #consultations {
+  main,
+  #consultations {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 }
 @media screen and (max-width: 768px) {
-  main, #recettesup {
+  main,
+  #recettesup {
     flex-direction: column;
   }
 }/*# sourceMappingURL=index.css.map */

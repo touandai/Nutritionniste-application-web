@@ -104,8 +104,6 @@ if(array_key_exists('ajouter', $_POST)) {
 <br>
 
 
-
-
 <main class="container content">
 <?php
     if(isset($_GET['succes']) && ($_GET['succes']== 1)) {
@@ -119,7 +117,7 @@ if(array_key_exists('ajouter', $_POST)) {
 
     <table class="table table-sm">
         <thead>
-            <tr class="table-primary">
+            <tr class="table-primary text-center">
                 <th>ID</th>
                 <th>Nom</th>
                 <th>Email</th>
@@ -128,13 +126,13 @@ if(array_key_exists('ajouter', $_POST)) {
             </tr>
         </thead>
 <?php
-$reqaffich ='SELECT * FROM cabinet_diet.patient ORDER BY id LIMIT 5';
+$reqaffich ='SELECT * FROM cabinet_diet.patient ORDER BY id LIMIT 7';
 $resultat = $conn -> prepare($reqaffich);
 $resultat -> execute();
 foreach($resultat as $key => $value){
 ?>
         <tbody>
-            <tr>
+            <tr class="text-center">
                 <td><?php echo $value['id'] ?> </td>
                 <td><?php echo $value['nom']?> </td>
                 <td><?php echo $value['email']?> </td>

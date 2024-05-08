@@ -103,7 +103,7 @@ if(array_key_exists('ajouter', $_POST)) {
     <section class="container recette">
         <table class="table table-striped table-bordered table-sm">
             <thead>
-                    <tr class="table-success">
+                    <tr class="table-success text-center">
                         <th>Titre</th>
                         <th>Description</th>
                         <th>Temps de preparation</th>
@@ -117,7 +117,7 @@ if(array_key_exists('ajouter', $_POST)) {
             </thead>
             <tbody>
             <?php
-                $req = "SELECT 
+                $req = "SELECT
                     id
                     , titre
                     , description
@@ -135,7 +135,7 @@ if(array_key_exists('ajouter', $_POST)) {
                 $resultat = $tdr -> fetchAll();
                 foreach($resultat as $key => $value) {
             ?>
-                <tr>
+                <tr class=" text-center">
                     <td><?php echo $value['titre']; ?></td>
                     <td><?php echo $value['description']; ?></td>
                     <td><?php echo $value['temps_preparation']; ?></td>
