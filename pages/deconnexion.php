@@ -4,6 +4,4 @@ $_session = array();
 
 session_destroy();
 
-header('location:monespace.php')
-
-?>
+header('location:monespace.php');

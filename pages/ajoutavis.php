@@ -65,11 +65,11 @@ require 'connexion.php';
     </div>
 </section>
 
-<main id="recettes-sup" class="container">
+<main class="container">
 <!--contenu principal-->
     <!--laisser un avis-->
     <section class="container">
-        <div class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="btn btn-secondary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <form class="form" method="POST" action="">
                 <fieldset>
                     <legend>Laissez-nous votre avis</legend>
@@ -82,6 +82,7 @@ require 'connexion.php';
                             <textarea class="form-control"  name="commentaire" placeholder="votre message ici" required/></textarea>
                         </div>
                         <br>
+                        <div>
                             <button class="btn btn-primary" name="valider" type="submit">Envoyer</button>
                         </div>
                     </fieldset>

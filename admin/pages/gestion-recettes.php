@@ -13,8 +13,13 @@ if(array_key_exists('supprimer',$_POST)){
     $req = 'DELETE FROM cabinet_diet.recettes WHERE id = :id';
     $reqsupp = $conn -> prepare($req);
     $reqsupp -> Bindvalue(':id',$id);
+            $suppcomment ='DELETE FROM cabinet_diet.avis WHERE recette_id =:id_recette';
+            $id_recette =  $id;
+            $suppavis = $conn-> prepare($suppcomment);
+            $suppavis -> bindValue ('id_recette',$id_recette);
+            $suppavis -> execute();
+
     $supp = $reqsupp -> execute();
-    
     if ($supp){
         header('location:?pages=gestion-recettes&succes=1');die;
     }else{
@@ -91,6 +96,7 @@ if(array_key_exists('ajouter', $_POST)) {
 
 <h1 class="text-center">Gestion Recettes</h1>
 
+
 <main class="container gestion-recette">
     <?php
     if(isset($_GET['succes']) && ($_GET['succes']==1)) {
@@ -130,7 +136,7 @@ if(array_key_exists('ajouter', $_POST)) {
                     , date_creation
                     , to_char(date_creation, 'dd/mm/yyyy') as date_formatage
                     , to_char(date_creation, 'HH24:MI:SS') as heure_formatage
-                     FROM cabinet_diet.recettes ORDER BY id LIMIT 5";
+                     FROM cabinet_diet.recettes ORDER BY id DESC LIMIT 10";
                 $tdr = $conn -> query($req);
                 $resultat = $tdr -> fetchAll();
                 foreach($resultat as $key => $value) {
@@ -173,7 +179,12 @@ if(array_key_exists('ajouter', $_POST)) {
               <legend>Ajouter des recettes</legend>
                 <div>
                     <label>Titre :</label>
-                    <input class="form-control" type="text" name="titre"/>
+                    <select class="form-control" type="text" name="titre">
+                           <option value="">--Selectionner--</option>
+                           <option value="Carnivore">Carnivore</option>
+                           <option value="Végétarien">Végétarien</option>
+                           <option value="Flexitarien">Flexitarien</option>
+                    </select>
                     <?php
                     if(isset($_GET['titre'])==1){
                     echo '<strong> Veuillez indiquer un Titre !</strong>';
@@ -191,7 +202,13 @@ if(array_key_exists('ajouter', $_POST)) {
                 </div>
                 <div>
                     <label>Temps de preparation :</label>
-                    <input class="form-control" type="text" name="temps_prepa"/>
+                    <select class="form-control" type="text" name="temps_prepa">
+                           <option value="">--Selectionner--</option>
+                           <option value="30">30</option>
+                           <option value="60">60</option>
+                           <option value="90">90</option>
+                           <option value="120">120</option>
+                    </select>
                     <?php
                     if(isset($_GET['temps_prepa'])==1){
                     echo '<strong> Champ obligatoire !</strong>';
@@ -200,7 +217,12 @@ if(array_key_exists('ajouter', $_POST)) {
                 </div>
                 <div>
                     <label>Temps de repos</label>
-                    <input class="form-control" type="text" name="temps_repos"/>
+                    <select class="form-control" type="text" name="temps_repos">
+                           <option value="">--Selectionner--</option>
+                           <option value="10">10</option>
+                           <option value="15">15</option>
+                           <option value="30">30</option>
+                    </select>
                     <?php
                     if(isset($_GET['temps_repos'])==1){
                     echo '<strong> Champ obligatoire !</strong>';
@@ -217,7 +239,12 @@ if(array_key_exists('ajouter', $_POST)) {
                 </div>
                 <div>
                     <label>Etapes :</label>
-                    <input class="form-control" type="text" name="etapes"/>
+                    <select class="form-control" type="text" name="etapes">
+                           <option value="">--Selectionner--</option>
+                           <option value="4">4</option>
+                           <option value="5">5</option>
+                           <option value="6">6</option>
+                    </select>
                     <?php
                     if(isset($_GET['etapes'])==1){
                     echo '<strong> Veuillez indiquer les étapes! </strong>';
@@ -226,7 +253,13 @@ if(array_key_exists('ajouter', $_POST)) {
                 </div>
                 <div>
                     <label> Allergènes :</label>
-                    <input class="form-control" type="text" name="allergenes"/>
+                    <select class="form-control" type="text" name="allergenes">
+                           <option value="">--Selectionner--</option>
+                           <option value="ras">ras</option>
+                           <option value="sans sel">sans sel</option>
+                           <option value="lactose">sans lactose</option>
+                           <option value="6">gluten</option>
+                    </select>
                     <?php
                     if(isset($_GET['allergenes'])==1){
                     echo '<strong> Veuillez remplir le champ ! </strong>';

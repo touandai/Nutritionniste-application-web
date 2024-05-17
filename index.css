@@ -198,6 +198,10 @@ aside,
   display: flex;
 }
 
+#recettesup {
+  gap: 10px;
+}
+
 /*Page confidentialité */
 #confidentialite {
   flex-direction: column;
@@ -212,11 +216,43 @@ aside,
 
 .ancre {
   text-decoration: none;
-  padding: 2px;
-  border: 3px solid;
-  border-radius: 10px;
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 15px;
   background-color: #ff6347;
   color: white;
+}
+
+ul {
+  display: inline-block;
+}
+
+strong,
+a {
+  text-decoration: none;
+}
+
+#child {
+  gap: 5px;
+}
+
+.row {
+  margin-bottom: 30px;
+}
+
+.col {
+  margin-bottom: 20px;
+}
+
+.gap {
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+#resultat {
+  font-weight: bold;
+  font-size: larger;
+  color: #ff6347;
 }
 
 /*Formulaires*/

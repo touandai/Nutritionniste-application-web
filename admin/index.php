@@ -16,7 +16,6 @@ if(isset($_SESSION['user_data'])) {
  //header('location:?pages=espaceadmin.php');//
 
 switch($pages) {
-
     /* Déconnexion */
     case 'deconnexion';
     require 'pages/deconnexion.php';

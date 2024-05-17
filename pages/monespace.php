@@ -99,6 +99,35 @@ if(array_key_exists('connexion',$_POST)){
                </form>
          </div> 
     </main>
+    <section class="container">
+
+        <table class="table table-sm text-centre">
+            <legend> Utilisateurs Patients</legend>
+            <thead>
+                  <tr>
+                     <th>Email </th>
+                     <th>Mot de pass: </th>
+                  </tr>
+            </thead>
+
+            <tbody>
+                <?php
+                $req ='SELECT * FROM cabinet_diet.patient LIMIT 4';
+                $pdostatement = $conn -> prepare($req);
+                $pdostatement -> execute();
+                foreach ($pdostatement as $key => $value){
+                ?>
+                <tr>
+                     <td><?= $value['email'] ?></td>
+                     <td><?= $value['mot_de_pass'] ?></td>
+                </tr>
+                <?php
+                }
+                ?>
+
+            </tbody>
+        </table>
+    </section><br>
     
     <aside id="aside" class="container">
             <ul>

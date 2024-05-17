@@ -39,16 +39,14 @@ require 'connexion.php';
  
 
            //verification email //
-
            $verifEmail = 'SELECT * FROM cabinet_diet.patient WHERE email = :email';
            $pdoStatement = $conn -> prepare($verifEmail);
            $pdoStatement -> bindValue(':email', $email);
            $result =  $pdoStatement -> execute ();
            
-           if($result == "true"){
-           header("location:?existe=1");die;
+           if($result == true){
+           header("location:?existe=1");
            }
-			
 		
             $reqInsert ='INSERT INTO cabinet_diet.patient(nom, prenom, email, mot_de_pass, date_creation) 
             values (:nom, :prenom, :email, :password, :date)';
@@ -101,12 +99,12 @@ require 'connexion.php';
                                 <input class="form-control" type="email" name="email" id="email">
                                 <span id="erreuremail"><span>
                                 <?php
-                                if(isset($_GET['email']) && ($_GET['email']==1)){
+                                if(isset($_GET['email']) && $_GET['email']==1){
                                 echo '<strong> Veuillez saisir votre adresse email </strong>';
                                 }
                                 ?>
                                 <?php
-                                if(isset($_GET['existe']) && $_GET['existe']==1){
+                                if (isset($_GET['existe']) && ($_GET['existe']== 1)){
                                 echo '<strong> Ce email existe déjà ! </strong>';
                                 }
                                 ?>
