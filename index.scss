@@ -86,7 +86,7 @@ li {
   justify-content: center;
   font-size: larger;
   letter-spacing: 3px;
-  margin-top: 10px;
+  margin-top: 50px;
 }
 #aside > ul > li {
   display: inline;
@@ -182,6 +182,8 @@ section,
 section,
 .recettes {
   display: block;
+  margin: 10px;
+  padding: 5px;
 }
 aside,
 #lien {
@@ -215,7 +217,11 @@ aside,
   color: white;
 }
 ul {
-  display: inline-block;
+  display: inline;
+}
+ul,
+li {
+  text-align: start;
 }
 strong,
 a {
